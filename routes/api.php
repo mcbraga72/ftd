@@ -15,3 +15,4 @@ use Illuminate\Http\Request;
 
 Route::apiResource('book', 'BookController');
 Route::apiResource('author', 'AuthorController');
+Route::apiResource('discipline', 'DisciplineController');
