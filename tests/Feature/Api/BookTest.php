@@ -25,18 +25,20 @@ class BookTest extends TestCase
      *
      * @return void
      */
-    /*public function testCreateBook()
+    public function testCreateBook()
     {
         $response = $this->json('POST', '/api/book', [
             'isbn' => '7898592130952',
             'title' => '360º Filosofia',
             'cover' => 'https://s3-us-west-2.amazonaws.com/catalogo.ftd.com.br/files/uploads/11699118CJ_resized_597x800.jpg',
             'level' => 'Ensino médio',
-            'price' => '219.00'
+            'price' => '219.00',
+            'authors' => [1],
+            'disciplines' => [1]
         ]);
-
+        
         $response->assertStatus(201);
-    }*/
+    }
 
     /**
      * Testing get method - show.
@@ -67,7 +69,9 @@ class BookTest extends TestCase
             'title' => $book->title,
             'cover' => $book->cover,
             'level' => $book->level,
-            'price' => $book->price
+            'price' => $book->price,
+            'authors' => [1],
+            'disciplines' => [1]
         ]);
         
         $this->assertDatabaseHas('books', [

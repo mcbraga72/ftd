@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-//use App\Models\Author;
-//use App\Models\Disicpline;
+use App\Models\Author;
+use App\Models\Discipline;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -26,18 +26,18 @@ class Book extends Model
      * 
      * @return Author[]
      */
-    /*public function authors()
+    public function authors()
     {
     	return $this->belongsToMany(Author::class, 'publications', 'book_id', 'author_id')->withPivot('id')->withTimestamps();
-    }*/
+    }
 
     /**
      * Get the disicplines associated with the book.
      * 
      * @return Disicpline[]
      */
-    /*public function disciplines()
+    public function disciplines()
     {
-    	return $this->belongsToMany(Disicpline::class, 'associations', 'book_id', 'discipline_id')->withPivot('id')->withTimestamps();
-    }*/
+    	return $this->belongsToMany(Discipline::class, 'associations', 'book_id', 'discipline_id')->withPivot('id')->withTimestamps();
+    }
 }

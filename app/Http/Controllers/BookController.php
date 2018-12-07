@@ -15,7 +15,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
+        $books = Book::with(['authors', 'disciplines'])->get();
         return response()->json($books);
     }
 
@@ -32,8 +32,10 @@ class BookController extends Controller
         $book->title = $request->title;
         $book->cover = $request->cover;
         $book->level = $request->level;
-        $book->price = $request->price;
+        $book->price = $request->price;        
         $book->save();
+        $book->authors()->attach([1]);
+        $book->disciplines()->attach([1]);
         return response()->json($book, 201);
     }
 
@@ -45,7 +47,7 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        $book = Book::findOrFail($id);
+        $book = Book::with(['authors', 'disciplines'])->findOrFail($id);
         return response()->json($book);
     }
 
@@ -64,6 +66,8 @@ class BookController extends Controller
         $book->cover = $request->cover;
         $book->level = $request->level;
         $book->price = $request->price;
+        $book->authors()->sync($request->authors);
+        $book->disciplines()->sync($request->disciplines);
         $book->save();
         return response()->json($book);
     }
