@@ -41,12 +41,12 @@
 ## Create a new book
 
 ##### POST https://ftdtest.herokuapp.com/api/book
-##### Body - 
+##### Body - {"isbn" : "ISBN", "title" : "Título do livro", "cover" : "URL da imagem do livro", "level" : "Nível", "price" : "Preço", "author_id" : {"id" : "Código do autor"}, "discipline_id" : {"id" : "Código da disciplina"}}
 
 ## Update a book
 
 ##### PUT https://ftdtest.herokuapp.com/api/book/{id}
-##### Body - 
+##### Body - {"isbn" : "ISBN", "title" : "Título do livro", "cover" : "URL da imagem do livro", "level" : "Nível", "price" : "Preço", "author_id" : {"id" : "Código do autor"}, "discipline_id" : {"id" : "Código da disciplina"}}
 
 ## Delete a book
 
@@ -64,12 +64,12 @@
 ## Create a new author
 
 ##### POST https://ftdtest.herokuapp.com/api/author
-##### Body - 
+##### Body - {"name" : "Nome do autor"}
 
 ## Update a author
 
 ##### PUT https://ftdtest.herokuapp.com/api/author/{id}
-##### Body - 
+##### Body - {"name" : "Nome do autor"}
 
 ## Delete a author
 
@@ -87,12 +87,12 @@
 ## Create a new discipline
 
 ##### POST https://ftdtest.herokuapp.com/api/discipline
-##### Body - 
+##### Body - {"name" : "Nome da disciplina"}
 
 ## Update a discipline
 
 ##### PUT https://ftdtest.herokuapp.com/api/discipline/{id}
-##### Body - 
+##### Body - {"name" : "Nome da disciplina"}
 
 ## Delete a discipline
 
