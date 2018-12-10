@@ -41,12 +41,12 @@
 ## Create a new book
 
 ##### POST https://ftdtest.herokuapp.com/api/book
-##### Body - {"isbn" : "ISBN", "title" : "Título do livro", "cover" : "URL da imagem do livro", "level" : "Nível", "price" : "Preço", "author_id" : {"id" : "Código do autor"}, "discipline_id" : {"id" : "Código da disciplina"}}
+##### Body - {"isbn" : "ISBN", "title" : "Título do livro", "cover" : "URL da imagem do livro", "level" : "Nível", "price" : "Preço", "authors" : "[IDs]", "disciplines" : "[IDs]"}
 
 ## Update a book
 
 ##### PUT https://ftdtest.herokuapp.com/api/book/{id}
-##### Body - {"isbn" : "ISBN", "title" : "Título do livro", "cover" : "URL da imagem do livro", "level" : "Nível", "price" : "Preço", "author_id" : {"id" : "Código do autor"}, "discipline_id" : {"id" : "Código da disciplina"}}
+##### Body - {"isbn" : "ISBN", "title" : "Título do livro", "cover" : "URL da imagem do livro", "level" : "Nível", "price" : "Preço", "authors" : "[IDs]", "disciplines" : "[IDs]"}
 
 ## Delete a book
 
